@@ -11,51 +11,77 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+        <style>
+            main{
+                margin-top: 70px;
+            }
+        </style>
+    
+    
+
 </head>
 
-<body>
-    <div class="container">
-        <h1 class="text-center my-3">小廢物購物網</h1>
-        <h3 class="text-center my-3">結帳頁面</h3>
-        <div class="row  d-flex justify-content-center">
-            <div class="col-sm-5">
+<body class="d-flex justify-content-between flex-column" style="height: 100vh;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="images/Smudger3_noqmarks_1200x1200.png" style="height: 30px;">小廢物購物網</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"href="signup.html">註冊</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  active" aria-current="page"   href="cart.html">結帳</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-                <span>購買人全名：</span>
-                <p id="fullname"></p>
-                <span>購買人email：</span>
-                <p id="email"></p>
-                <span>使用者名稱：</span>
-                <p id="userid"></p>
-                <span>購買數量：</span>
-                <p id="qty"></p>
-                <form action="https://www.townway.com.tw/auth" method="post">
-                    <!-- <div class="input-group my-2">
-                        <span class="input-group-text" id="basic-addon1">購買人全名</span>
-                        <p id=""></p>
-                        <input type="text" class="form-control" placeholder="請輸入姓名" id="fullname">
+      <main>
+        <div class="container">
+            <h1 class="text-center my-3">小廢物購物網</h1>
+            <h3 class="text-center my-3">結帳頁面</h3>
+            <div class="row  d-flex justify-content-center">
+                <div class="col-sm-5">
+    
+                    <span>購買人全名：</span>
+                    <p id="fullname">未填寫</p>
+                    <span>購買人email：</span>
+                    <p id="email">未填寫</p>
+                    <span>使用者名稱：</span>
+                    <p id="userid">未填寫</p>
+                    <span>購買數量：</span>
+                    <p id="qty">未填寫</p>
+                    <form action="#" method="post">
+    
+                        <div class="input-group my-2">
+                            <span class="input-group-text" id="basic-addon1">寄送地址</span>
+                            <input type="text" class="form-control" placeholder="請輸入寄送地址" id="userid">
+                        </div>
+                    </form>
+                    <div style="height: 3rem;">
+                        <p id="warn"></p>
                     </div>
-                    <div class="input-group my-2">
-                        <span class="input-group-text" id="basic-addon1">購買人email</span>
-                        <input type="email" class="form-control" placeholder="請輸入email" id="email">
-                    </div>
-                    <div class="input-group my-2">
-                        <span class="input-group-text" id="basic-addon1">使用者名稱</span>
-                        <input type="text" class="form-control" placeholder="請輸入使用者名稱" id="userid">
-                    </div> -->
-
-                    <div class="input-group my-2">
-                        <span class="input-group-text" id="basic-addon1">寄送地址</span>
-                        <input type="text" class="form-control" placeholder="請輸入寄送地址" id="userid">
-                    </div>
-                </form>
-                <div style="height: 3rem;">
-                    <p id="warn"></p>
+                    <a href="#"><button type="button" class="btn btn-primary my-3" style="width: 100%;">送出</button></a>
+    
                 </div>
-                <a href="#"><button type="button" class="btn btn-primary my-3" style="width: 100%;">送出</button></a>
-
             </div>
         </div>
-    </div>
+      </main>
+      <footer class="bg-light mt-5">
+        <div class="container">
+              <div class="py-3">
+                Icon borrow from Smudge Lord
+              </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

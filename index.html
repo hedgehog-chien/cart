@@ -11,37 +11,76 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <style>
+      main{
+          margin-top: 70px;
+      }
+  </style>
+
 </head>
 
 <body>
-  <div class="container">
-    <h1 class="text-center my-3">小廢物購物網</h1>
-    <div class="row d-flex justify-content-center">
-      <div class="col-sm-5 d-flex justify-content-center">
-        <div class="card" style="width: 25rem;">
-          <img src="images/chicken.jpg" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title mb-3">檸檬椒鹽舒肥雞</h5>
-            <p>數量：</p>
-            <select id="product-qty">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-            <p class="card-text mt-3">檸檬椒鹽<br>
-              白香蒜：嚴選優質蒜頭研磨製成粉，具濃烈天然蒜香及辛辣口感。<br>
-              檸檬椒鹽：具有檸檬芳香及溫和胡椒香味。<br>
-              檸檬原汁：現榨檸檬原汁。<br>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="images/Smudger3_noqmarks_1200x1200.png"
+          style="height: 30px;">小廢物購物網</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="signup.html">註冊</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-              （肉1.5kg/調味粉40g）</p>
-            <a href="signup.html" class="btn btn-primary">加入購物車</a>
+
+  <main>
+    <div class="container">
+      <h1 class="text-center">小廢物購物網</h1>
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-4  d-flex justify-content-center">
+          <div class="card" style="width: 25rem;">
+            <img src="images/chicken.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title mb-3">檸檬椒鹽舒肥雞</h5>
+              <p>數量：</p>
+              <select id="product-qty">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <p class="card-text mt-3">檸檬椒鹽<br>
+                白香蒜：嚴選優質蒜頭研磨製成粉，具濃烈天然蒜香及辛辣口感。<br>
+                檸檬椒鹽：具有檸檬芳香及溫和胡椒香味。<br>
+                檸檬原汁：現榨檸檬原汁。<br>
+
+                （肉1.5kg/調味粉40g）</p>
+              <a href="signup.html" class="btn btn-primary">加入購物車</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="bg-light mt-5">
+    <div class="container">
+      <div class="py-3">
+        Icon borrow from Smudge Lord
+      </div>
+    </div>
+  </footer>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -60,7 +99,7 @@
     $("#product-qty").change(
       function () {
         var qty = document.getElementById("product-qty").value;
-        $.cookie("qty", qty);        
+        $.cookie("qty", qty);
       }
 
     )
